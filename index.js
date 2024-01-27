@@ -8,14 +8,9 @@
  **/
 
 // import shapes, inquirer, fs (promise version)
-const { Circle, Square, Triangle } = require('./lib/shapes')
+const { Circle, Square, Triangle, svgColors } = require('./lib/shapes')
 const inquirer = require('inquirer');
 const { writeFile } = require('fs/promises');
-
-// names for all 147 defined CSS/SVG colors for validation
-const svgColors = [
-  'aliceblue', 'antiquewhite', 'aqua', 'aquamarine', 'azure', 'beige', 'bisque', 'black', 'blanchedalmond', 'blue', 'blueviolet', 'brown', 'burlywood', 'cadetblue', 'chartreuse', 'chocolate', 'coral', 'cornflowerblue', 'cornsilk', 'crimson', 'cyan', 'darkblue', 'darkcyan', 'darkgoldenrod', 'darkgray', 'darkgreen', 'darkgrey', 'darkkhaki', 'darkmagenta', 'darkolivegreen', 'darkorange', 'darkorchid', 'darkred', 'darksalmon', 'darkseagreen', 'darkslateblue', 'darkslategray', 'darkslategrey', 'darkturquoise', 'darkviolet', 'deeppink', 'deepskyblue', 'dimgray', 'dimgrey', 'dodgerblue', 'firebrick', 'floralwhite', 'forestgreen', 'fuchsia', 'gainsboro', 'ghostwhite', 'gold', 'goldenrod', 'gray', 'green', 'greenyellow', 'grey', 'honeydew', 'hotpink', 'indianred', 'indigo', 'ivory', 'khaki', 'lavender', 'lavenderblush', 'lawngreen', 'lemonchiffon', 'lightblue', 'lightcoral', 'lightcyan', 'lightgoldenrodyellow', 'lightgray', 'lightgreen', 'lightgrey', 'lightpink', 'lightsalmon', 'lightseagreen', 'lightskyblue', 'lightslategray', 'lightslategrey', 'lightsteelblue', 'lightyellow', 'lime', 'limegreen', 'linen', 'magenta', 'maroon', 'mediumaquamarine', 'mediumblue', 'mediumorchid', 'mediumpurple', 'mediumseagreen', 'mediumslateblue', 'mediumspringgreen', 'mediumturquoise', 'mediumvioletred', 'midnightblue', 'mintcream', 'mistyrose', 'moccasin', 'navajowhite', 'navy', 'oldlace', 'olive', 'olivedrab', 'orange', 'orangered', 'orchid', 'palegoldenrod', 'palegreen', 'paleturquoise', 'palevioletred', 'papayawhip', 'peachpuff', 'peru', 'pink', 'plum', 'powderblue', 'purple', 'red', 'rosybrown', 'royalblue', 'saddlebrown', 'salmon', 'sandybrown', 'seagreen', 'seashell', 'sienna', 'silver', 'skyblue', 'slateblue', 'slategray', 'slategrey', 'snow', 'springgreen', 'steelblue', 'tan', 'teal', 'thistle', 'tomato', 'turquoise', 'violet', 'wheat', 'white', 'whitesmoke', 'yellow', 'yellowgreen'
-];
 
 // main function run when node index is input at CL
 function run() {
@@ -36,7 +31,7 @@ function run() {
     { // color of the text
       type: 'input', name: 'textColor', message: prompt.textColor,
       validate: value => { // test for valid name; exclude hex values
-        if (!svgColors.includes(value) && !value.includes('#')) return "I don't recognize that color name"
+        if (!svgColors.includes(value.toLowerCase()) && !value.includes('#')) return "I don't recognize that color name"
         else return true;
       }
     },
@@ -47,7 +42,7 @@ function run() {
     { // logo fill color
       type: 'input', name: 'shapeColor', message: prompt.shapeColor,
       validate: value => { // test for valid name; exclude hex values
-        if (!svgColors.includes(value) && !value.includes('#')) return "I don't recognize that color name"
+        if (!svgColors.includes(value.toLowerCase()) && !value.includes('#')) return "I don't recognize that color name"
         else return true;
       }
     }
