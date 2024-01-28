@@ -42,7 +42,7 @@ You may, of course, edit the SVG logo after it is generated; the logos are only 
   <text x="150" y="125" font-size="60" text-anchor="middle" fill="aliceblue">UNC</text>
 </svg>
 ```
-The first line can be changed to tweak the size of the logo and the second line governs the shape and shape color. The third line determines the text and its size, color and placement within the logo. Read the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/SVG) for more information about SVGs, or an image editor ([Inkscape](https://inkscape.org) is free) for more complex tweaks.
+The first line can be changed to tweak the size of the logo and the second line governs the shape and shape color. The third line determines the text and its size, color and placement within the logo. Read the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/SVG) for more information about SVGs or use an image editor ([Inkscape](https://inkscape.org) is free) for more complex tweaks.
 
 ## Questions
 Reach out if you have questions that are not covered here.
