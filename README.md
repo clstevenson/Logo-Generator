@@ -32,7 +32,9 @@ Start the app from the command line by typing `node index.js`. You will see a se
 4. Enter shape color by name or hex (johndecember.com/html/spec/colorsvg.html).
 ```
 
-For question 1, inputs of more than 3 chars are not allowed (but 0 characters is okay). For questions 2 and 4 you may use any one of the [147 colors listed](https://johndecember.com/html/spec/colorsvgsvg.html) in the SVG specification. Input that is not one of those names will not be allowed. You can also enter your color as a hex value; there is no validation of hex codes. You may, of course, edit the SVG logo after it is generated; the logos are only four lines of XML test; the listing below shows the file contents of the first logo in the images above.
+For question 1, inputs of more than 3 chars are not allowed (but 0 characters is okay). For questions 2 and 4 you may use any one of the [147 colors listed](https://johndecember.com/html/spec/colorsvgsvg.html) in the SVG specification. Input that is not one of those names will not be allowed. You can also enter your color as a hex value; there is no validation of hex codes.
+
+You may, of course, edit the SVG logo after it is generated; the logos are only four lines of XML. The listing below shows the file contents of the first logo in the images above.
 
 ```
 <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +42,7 @@ For question 1, inputs of more than 3 chars are not allowed (but 0 characters is
   <text x="150" y="125" font-size="60" text-anchor="middle" fill="aliceblue">UNC</text>
 </svg>
 ```
-The first line can be changed to tweak the size of the logo, the second line governs the shape and shape color, and the third line determines the text and its color and placement within the logo.
+The first line can be changed to tweak the size of the logo and the second line governs the shape and shape color. The third line determines the text and its size, color and placement within the logo. Read the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/SVG) for more information about SVGs, or an image editor ([Inkscape](https://inkscape.org) is free) for more complex tweaks.
 
 ## Questions
 Reach out if you have questions that are not covered here.
